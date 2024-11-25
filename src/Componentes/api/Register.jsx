@@ -2,13 +2,14 @@ import { useState } from "react";
 import api from './api';
 
 const Register = () => {
-    const [username, setUsername] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [edad, setEdad] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
 e.preventDefault();
 try{
-    await api.post('/usuarios/register', {username, password});
+    await api.post('/usuarios/register', {nombre, edad, password});
     alert('Usuario registrado con éxito');
 } catch(error){
     alert ('Error al registrar:  '+ error.responde.data);
@@ -21,8 +22,13 @@ try{
             <h2>Registro</h2>
             <input type="text"
                 placeholder="Nombre de usuario"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
+                required />
+            <input type="number"
+                placeholder="Nombre de usuario"
+                value={edad}
+                onChange={(e) => setEdad(e.target.value)}
                 required />
             <input type="password"
                 placeholder="Contraseña"
