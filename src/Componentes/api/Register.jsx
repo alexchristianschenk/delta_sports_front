@@ -8,7 +8,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
 e.preventDefault();
 try{
-    await api.post('/users/register', {username, password});
+    await api.post('/usuarios/register', {username, password});
     alert('Usuario registrado con éxito');
 } catch(error){
     alert ('Error al registrar:  '+ error.responde.data);
