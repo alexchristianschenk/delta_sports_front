@@ -19,6 +19,7 @@ return(
           <Nav className="me-auto">
             <Nav.Link href="/seccion">Inicio</Nav.Link>
             <Nav.Link href="/reservas">Reservas</Nav.Link>
+            <Nav.Link href="/register">Registro</Nav.Link>
             <NavDropdown title="Nuestras propuestas" id="basic-nav-dropdown">
               <NavDropdown.Item href="/eventos">Cumpleaños y festejos</NavDropdown.Item>
             </NavDropdown>
