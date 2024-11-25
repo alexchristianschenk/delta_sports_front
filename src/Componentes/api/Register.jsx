@@ -9,7 +9,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
 e.preventDefault();
 try{
-    await api.post('/users/register', {nombre, edad, password});
+    await api.post('/register', {nombre, edad, password});
     alert('Usuario registrado con éxito');
 } catch(error){
     alert ('Error al registrar:  '+ error.responde.data);
@@ -25,7 +25,7 @@ try{
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
                 required />
-            <input type="text"
+            <input type="number"
                 placeholder="Edad"
                 value={edad}
                 onChange={(e) => setEdad(e.target.value)}

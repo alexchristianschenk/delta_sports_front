@@ -1,6 +1,6 @@
 import axios from "axios";
 const api = axios.create({
-    baseURL: 'https://delta-sports-back.onrender.com/api'
+    baseURL: 'https://delta-sports-back.onrender.com/api/users'
 })
 
 export default api;
