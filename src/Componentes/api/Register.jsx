@@ -25,7 +25,7 @@ try{
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
                 required />
-            <input type="text"
+            <input type="age"
                 placeholder="Nombre de usuario"
                 value={edad}
                 onChange={(e) => setEdad(e.target.value)}
